@@ -67,7 +67,7 @@ public class AssuranceServiceImpl implements IAssuranceService {
         contrat.setStatut(StatutContrat.EN_COURS);
         contrat.setDateSouscription(new Date());
         ContratHabitation savedContrat = contratRepo.save(contrat);
-        return mapper.fromContratHabit(savedContrat);
+        return mapper.fromContratHab(savedContrat);
     }
 
     @Override
@@ -124,7 +124,7 @@ public class AssuranceServiceImpl implements IAssuranceService {
         Contrat contrat = contratRepo.findById(contratId)
                 .orElseThrow(() -> new RuntimeException("Contrat introuvable"));
         Paiement paiement = new Paiement();
-        paiement.setDatePaiement(new Date());
+        paiement.setDate(new Date());
         paiement.setMontant(montant);
         paiement.setType(TypePaiement.valueOf(type));
         paiement.setContrat(contrat);

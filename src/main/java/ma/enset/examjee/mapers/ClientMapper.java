@@ -3,6 +3,9 @@ package ma.enset.examjee.mapers;
 import ma.enset.examjee.DTOs.ClientDTO;
 import ma.enset.examjee.entities.Client;
 import org.springframework.beans.BeanUtils;
+import org.springframework.stereotype.Component;
+
+@Component
 
 public class ClientMapper {
     public ClientDTO fromClient(Client client) {

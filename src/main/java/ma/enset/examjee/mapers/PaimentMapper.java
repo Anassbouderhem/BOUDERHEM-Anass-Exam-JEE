@@ -3,6 +3,9 @@ package ma.enset.examjee.mapers;
 import ma.enset.examjee.DTOs.PaiementDTO;
 import ma.enset.examjee.entities.Paiement;
 import org.springframework.beans.BeanUtils;
+import org.springframework.stereotype.Component;
+
+@Component
 
 public class PaimentMapper {
 

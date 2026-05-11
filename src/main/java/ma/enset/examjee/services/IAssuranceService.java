@@ -1,9 +1,6 @@
 package ma.enset.examjee.services;
 
-import ma.enset.examjee.DTOs.ClientDTO;
-import ma.enset.examjee.DTOs.ContratAutoDTO;
-import ma.enset.examjee.DTOs.ContratDTO;
-import ma.enset.examjee.DTOs.PaiementDTO;
+import ma.enset.examjee.DTOs.*;
 
 import java.util.List;
 
@@ -12,6 +9,11 @@ public interface IAssuranceService {
     List<ClientDTO> listClients();
 
     ContratAutoDTO souscrireContratAuto(ContratAutoDTO dto);
+
+    ContratHabitationDTO souscrireContratHab(ContratHabitationDTO dto);
+
+    ContratSanteDTO souscrireContratSante(ContratSanteDTO dto);
+
     void validerContrat(Long contratId);
     void resilierContrat(Long contratId);
     List<ContratDTO> getContratsByClient(Long clientId);
