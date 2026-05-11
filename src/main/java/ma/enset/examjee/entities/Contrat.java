@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import ma.enset.examjee.enums.StatutContrat;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
